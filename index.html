@@ -12,6 +12,7 @@
     <div class="container">
         <h1 class="tasbeh-h1" ><span>TASBEEH</span> COUNTER</h1>
         <h3 class="tasbeh-h3" > IBROHIMBEK <span>ISMOILOV</span></h3>
+        <h2 class="tasbeh-h3" id="zikr" ><span>Subhanallah</span></h2>
         <div class="box-main">
             <!-- <div class="box-number">0</div> -->
             <input type="text" class="box-number" value="0">
@@ -36,17 +37,37 @@
             var number = document.querySelector('.box-number');
             console.log( typeof parseInt( number.value ) );
             number.value = parseInt( number.value ) + 1 ;
+            
 
-            if( parseInt( number.value ) === 33){
-                navigator.vibrate([500, 200, 500])
-                document.querySelector('.box-number').value = 0;
+            if( parseInt( number.value ) === 1 && parseInt( number.value ) > 0){
+                navigator.vibrate([300, 200, 300, 200])
+                // document.querySelector('.box-number').value = 0;
+                document.querySelector('#zikr').innerText = "Subhanallah";
                 console.log("33");
+                
+            }else if(parseInt( number.value ) === 33 ){
+                navigator.vibrate([300, 200, 300, 200])
+                // document.querySelector('.box-number').value = 0;
+                document.querySelector('#zikr').innerText = "Alhamdulillah";
+                console.log("33");
+            }
+            else if(parseInt( number.value ) === 66){
+                navigator.vibrate([300, 200, 300, 200])
+                document.querySelector('#zikr').innerText = "Allahu Akbar";
+                console.log("66");
+            }
+            else if(parseInt( number.value ) === 99){
+                navigator.vibrate([300, 200, 300, 200])
+                document.querySelector('#zikr').innerText = "";
+                console.log("99");
             }
             
         });
 
         document.querySelector('.reset').addEventListener('click', function(){
+            navigator.vibrate([1000])
             document.querySelector('.box-number').value = 0;
+            document.querySelector('#zikr').innerText = "";
         })
 
     </script>
