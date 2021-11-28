@@ -116,6 +116,19 @@
     color: white;
 }
 
+.play{
+    color: white;
+    margin: 5px;
+}
+
+.play:hover{
+    color: rgb(5, 151, 0);
+    transition: 0.1s;
+}
+.btn-play{
+    display: flex;
+}
+
 @media only screen and (max-width: 400px) {
     
     .container{
