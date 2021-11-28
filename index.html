@@ -44,8 +44,8 @@
             console.log( typeof parseInt( number.value ) );
             number.value = parseInt( number.value ) + 1 ;
 
-            if( parseInt( number.value ) === 10){
-                navigator.vibrate([300, 300])
+            if( parseInt( number.value ) === 33){
+                navigator.vibrate([1000, 1000])
                 document.querySelector('.box-number').value = 0;
                 console.log("33");
             }
