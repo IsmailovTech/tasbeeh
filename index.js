@@ -1,3 +1,4 @@
+
         const audio = new Audio();
         audio.src = "./mp3/zikr.mp3"
 
@@ -6,6 +7,7 @@
 
         const audio2 = new Audio();
         audio2.src = "./mp3/allohuakbar.mp3"
+
 
         function vibrate (ms){
             navigator.vibrate(ms)
