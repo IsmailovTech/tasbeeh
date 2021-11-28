@@ -43,6 +43,7 @@
             else if(parseInt( number.value ) === 99){
                 navigator.vibrate([700])
                 document.querySelector('#zikr').innerText = "";
+                document.querySelector('#play').audio = {};
                 console.log("99");
             }
             
