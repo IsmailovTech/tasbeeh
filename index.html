@@ -16,7 +16,7 @@
         <div class="box-main">
             <!-- <div class="box-number">0</div> -->
             <input type="text" class="box-number" value="0">
-            <button class="count" onClick="vibrate(200)"  ></button>
+            <button class="count" onClick="vibrate(200)"></button>
             <p>COUNT</p>
             <button class="reset" ></button>
             <h4 class="reset-P" >RESET</h4>
@@ -25,6 +25,11 @@
 
     <script type="text/javascript">
 
+
+
+        function vibratePattern (){
+                    navigator.vibrate([300, 300])
+        }
         
 
         function vibrate (ms){
@@ -39,10 +44,10 @@
             console.log( typeof parseInt( number.value ) );
             number.value = parseInt( number.value ) + 1 ;
 
-                if(count === 33){
-                    function vibratePattern (){
-                    navigator.vibrate([300, 300])
-                }
+            if( parseInt( number.value ) === 10){
+                navigator.vibrate([300, 300])
+                document.querySelector('.box-number').value = 0;
+                console.log("33");
             }
             
         });
